@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.parallax-container {
+    background-image: url('https://m.economictimes.com/thumb/msid-102358835,width-1200,height-900,resizemode-4,imgsize-91098/upcoming-netflix-originals-2023-check-list-of-all-the-renewed-seasons-coming-to-streaming-giant.jpg');
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.glass-container {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 30px;
+    backdrop-filter: blur(10px);
+    border-radius: 10px;
+    text-align: center;
+}
+
+form {
+    margin-top: 20px;
+}
+
+label, input, button {
+    display: block;
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+button {
+    background-color: #e50914;
+    color: #fff;
+    border: none;
+    padding: 15px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff0a16;
+}
+
+/* Parallax Effect */
+.parallax-container::before {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+}
+
+/* Glass Morphism Effect */
+.glass-container::before {
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    background: inherit;
+    backdrop-filter: blur(20px);
+    border-radius: 25px;
+    z-index: -1;
+}
